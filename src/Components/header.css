@@ -1,0 +1,13 @@
+.header {
+    min-width: 300px;
+    background-color: #333333;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.memePic {
+    max-width: 10%;
+    max-height: 10%;
+}
