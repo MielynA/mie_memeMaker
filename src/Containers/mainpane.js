@@ -11,7 +11,7 @@ class MainPane extends React.Component {
             topTex: "",
             bottomTex: "",
             allMemeImg: [],
-            modalIsOpen: false,
+           // modalIsOpen: false,
             randomImg: "https://i.imgflip.com/gft6.jpg"
         }
     }

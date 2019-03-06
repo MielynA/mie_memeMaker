@@ -1,12 +1,29 @@
 import React from 'react';
+import Axios from 'axios';
 
 class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             searchInput: '',
+            allMemeImg: [],
         }
     }
+ 
+  handleSearchText = (e) =>{
+      this.setState({searchInput: e.target.value})
+      console.log(e.target.value)
+  }
+
+  handleSubmit = (e) =>{
+      console.log("this button was clicked")
+      Axios('https://api.imgflip.com/get_memes')
+      .then(res => {
+          const memes = res.data.data.memes;
+          console.log(memes)
+          this.setState({ allMemeImg: memes })
+  })
+}
     render() {
         return (
             <React.Fragment>
