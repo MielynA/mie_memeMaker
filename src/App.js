@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import HeaderPane from './Components/header';
+import MainPane from './Containers/mainpane';
+import Search from './Containers/search';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
+      
+       <React.Fragment>
+         
        <HeaderPane />
- 
-      </div>
+       <Search />
+       <MainPane />
+     
+       </React.Fragment>
     );
   }
 }

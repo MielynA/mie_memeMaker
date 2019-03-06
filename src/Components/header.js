@@ -1,30 +1,39 @@
 import React from 'react';
 import './header.css';
-import { Media} from 'reactstrap';
-import MainPane from './mainpane';
+// import { useWindowSize } from 'react-use';
+// import Confetti from 'react-confetti';
+import { Media, Container, Nav } from 'reactstrap';
 
-const HeaderPane = () => {
+
+const HeaderPane = (props) => {
+   // const { width = '50px', height = '50px' } = useWindowSize()
+
    return (
-    <>
-  
-    <div className='header'>
-    <Media> 
-     <Media href='#'>
-     <Media className='memePic' src={require('../assets/meme2.png')}  />
-      </Media>
-      <Media body>
-      <p>Make-A-Meme Generator</p>
-     <p>
-     You can add top and bottom text to a meme-template, </p>
-     <p>move the text around and can save the image by downloading it
-     </p>
-        <Media heading>
-        <MainPane />
-      </Media>
-     </Media>
-     </Media>
-     </div>
-    </>
+      <React.Fragment>
+            
+            <nav className='navbar navbar-expand-lg bg-dark'>
+            <div className = 'col-4'>
+               <a className='navbar-brand'>
+                  
+                  <Media className='memePic' src='https://media.giphy.com/media/utZ6qyygNqBzO/giphy.gif'></Media></a></div>
+                  <div className='col-6'>
+                    <p className='typewriter'>
+                     <h1 className='textMeme'> MEME MAKER!</h1>
+                     <h6> Get randomly meme pic or search to create a meme</h6>
+                     </p>
+                  </div>   
+                  <div className = 'col-4'>
+                  <a className='navbar-brand '>
+                  <Media className='memePic ' src='https://media.giphy.com/media/utZ6qyygNqBzO/giphy.gif'></Media></a></div>
+            </nav>
+
+         {/* <div className='row'>
+                   <Confetti width={width}
+                     height={height}
+                    /></div> */}
+
+
+      </React.Fragment>
    );
 }
 
